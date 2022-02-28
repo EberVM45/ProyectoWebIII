@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 * { 
   margin: 0;
@@ -11,6 +12,7 @@ div{
 
 p{
   text-align: justify;
+  font-family:'Open Sans', sans-serif;;
 }
 
 .bd-placeholder-img {
@@ -47,17 +49,6 @@ p{
     text-decoration: none;
   }
 
-  .site-header button{
-    border-color: #B8CCD9;
-    color: #B8CCD9;
-    background-color: #224459;
-  }
-
-  .site-header button:hover{
-    background-color: #fff;
-    color: #224459;
-  }
-
   h2{
     color: #3E6E8C;
   }
@@ -68,14 +59,25 @@ p{
   }
 
   .btn_registrar{
+      border-color: #B8CCD9;
+      color: #B8CCD9;
+      background-color: #224459;
+  }
+
+  .btn_inicio_sesion{
     color: #224459;
-    border-color: #224459;
     background-color: white;
   }
 
-  .btn:hover{
+  .btn_registrar:hover{
+    background-color: #fff;
+    color: #224459;
+  }
+
+  .btn_inicio_sesion:hover{
     color: white;
     background-color: #224459;
+    text-decoration: underline;
   }
 
   .nav_bar{
