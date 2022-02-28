@@ -21,8 +21,8 @@
 <body>
   <!--Menu-->
     <header class="site-header sticky-top py-1">
-        <nav class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2" href="#sobre_nw" aria-label="Logo">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between py-1">
+          <a href="#sobre_nw" aria-label="Logo">
             <img src="../img/LogoWind.png" width="50em" height="50em">    
           </a>
           <a class="py-2 d-none d-md-inline-block" href="#Contenedor_carrusel">Inicio</a>
@@ -30,7 +30,7 @@
           <a class="py-2 d-none d-md-inline-block" href="#planes_precios">Planes y precios</a>
           <a class="py-2 d-none d-md-inline-block" href="..">Soporte</a>
           <a class="py-2 d-none d-md-inline-block" href="..">Empresa</a>
-          <a class="py-2 d-none d-md-inline-block" href="..">Contacto</a>
+          <a class="py-2 d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contacto</a>
           <button type="button" class="btn btn-lg btn_inicio_sesion">Iniciar sesion</button>
           <a href="../vista/Registro.html"><button type="button" class="btn btn-lg btn_registrar">Registrarse</button></a>
         </nav>
@@ -38,6 +38,7 @@
     
     <div class="container" id="Contenedor_carrusel">
       <br>
+      <!--INICIO-->
       <!--Carrusel-->
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -201,6 +202,96 @@
               </ul>
               <button type="button" class="w-100 btn btn-lg btn_registrar">Comprar</button>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header" style="padding-left: 40%;">
+            <h3 class="modal-title" id="staticBackdropLabel">Contacto</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="px-4 py-1 my-1 text-center">
+              <img class="d-block mx-auto mb-2" src="../img/LogoWind.png" alt="" width="62" height="47">
+              <h4 class="display-7 fw-bold" style="color: #224459;">NORTHMIND</h4>
+            </div>
+            <div>
+              <lu>
+                <li class="d-flex gap-4">
+                  <img src="../img/message.png" alt="No disponible" width="48" height="48" >
+                  <div>
+                    <h5 class="mb-0">Soporte vía chat</h5>
+                      Chatea directamente con nuestro centro de atención a clientes.
+                  </div>
+                </li>
+              </ul>
+              <div class="div_contactos">
+                <br>
+                <button type="button" class="btn btn-lg botones_contacto">Chatea ahora</button>
+              </div>
+            </div>
+
+
+            <br>
+            <div> 
+              <lu>
+                <li class="d-flex gap-4">
+                  <img src="../img/email.png" alt="No disponible" width="48" height="48" >
+                  <div>
+                    <h5 class="mb-0">Envíenos un correo electrónico</h5>
+                      Envíe sus consultas por correo electrónico y uno de nuestros expertos se comunicarán con usted.
+                  </div>
+                </li>
+              </ul>
+              <div class="div_contactos">
+                <br>
+                <button type="button" class=" btn btn-lg botones_contacto ">Enviar correo</button>
+              </div>
+            </div>
+
+
+            <br>  
+            <div>
+              <ul>
+                <li class="d-flex gap-4">
+                  <img src="../img/phone.png" alt="No disponible" width="48" height="48" >
+                  <div>
+                    <h5 class="mb-0">Llámanos</h5>
+                      Póngase en contacto con nuestro equipo de soporte para una consulta gratuita
+                  </div>
+                </li>
+              </ul>
+              <div class="div_contactos">
+                <br>
+                <button type="button" class=" btn btn-lg botones_contacto">Llamar</button>
+              </div>
+            </div>
+
+
+            <br> 
+            <div>
+              <ul>
+                <li class="d-flex gap-4">
+                  <img src="../img/company.png" alt="No disponible" width="48" height="48" >
+                  <div>
+                    <h5 class="mb-0">Cotización empresarial</h5>
+                      Póngase en contacto con el equipo de ventas de la empresa para obtener una cotización
+                  </div>
+                </li>                
+              <div class="div_contactos">
+                <br>
+                <button type="button" class="btn btn-lg botones_contacto">Contactar a Ventas</button>
+              </div>
+            </div>   
+            
+            
           </div>
         </div>
       </div>

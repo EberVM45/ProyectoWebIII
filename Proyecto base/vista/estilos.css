@@ -67,6 +67,7 @@ p{
   .btn_inicio_sesion{
     color: #224459;
     background-color: white;
+    height: 47px;
   }
 
   .btn_registrar:hover{
@@ -84,3 +85,17 @@ p{
     color:white;
     background-color: #224459;
   }
+  .div_contactos{
+    text-align: center;
+  }
+  .botones_contacto{
+    color: #224459;
+    border:0;
+    background-color: white;
+  }
+  .botones_contacto:hover{
+    color: white;
+    border:0;
+    background-color: #224459;
+  }
+
