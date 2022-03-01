@@ -98,4 +98,9 @@ p{
     border:0;
     background-color: #224459;
   }
-
+  .card_soporte{
+    background-color: #224459; 
+    border-radius: 5px;
+    width:180px;
+    height:190px;
+  }
