@@ -2,141 +2,238 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/product/">
-    <title>NorthWind</title>
-    <!--Icono Pestaña-->
-    <link rel="shortcut icon" href="../img/LogoWind.png" type="image/x-icon">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- Estilos -->
-    <link href="estilos.css" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/product/">
+  <title>NorthWind</title>
+  <!--Icono Pestaña-->
+  <link rel="shortcut icon" href="../img/LogoWind.png" type="image/x-icon">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- Estilos -->
+  <link href="estilos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
 
 <body>
   <!--Menu-->
-    <header class="site-header sticky-top py-1">
-        <nav class="container d-flex flex-column flex-md-row justify-content-between py-1">
-          <a href="#sobre_nw" aria-label="Logo">
-            <img src="../img/LogoWind.png" width="50em" height="50em">    
-          </a>
-          <a class="py-2 d-none d-md-inline-block" href="#Contenedor_carrusel">Inicio</a>
-          <a class="py-2 d-none d-md-inline-block" href="#caract">Caracteristicas</a>
-          <a class="py-2 d-none d-md-inline-block" href="#planes_precios">Planes y precios</a>
-          <a class="py-2 d-none d-md-inline-block" href="..">Soporte</a>
-          <a class="py-2 d-none d-md-inline-block" href="..">Empresa</a>
-          <a class="py-2 d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Contacto</a>
-          <button type="button" class="btn btn-lg btn_inicio_sesion">Iniciar sesion</button>
-          <a href="../vista/Registro.html"><button type="button" class="btn btn-lg btn_registrar">Registrarse</button></a>
-        </nav>
-    </header>
-    
-    <div class="container" id="Contenedor_carrusel">
-      <br>
-      <!--INICIO-->
-      <!--Carrusel-->
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../img/SLIDER CARRUSEL 1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/SLIDER CARRUSEL 2.jpg" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-      <!--INFORMACION SOBRE EL SOFTWARE-->
-      <div class="container px-4 py-5" id="sobre_nw">
-        <h2 class="display-6 text-center mb-4 border-bottom" id="sobre_n">Sobre Northwind</h2>
-        <div class="mb-4 rounded-3">
-          <div class="container-fluid">
-            <p class="fs-4">
-              Todo lo que necesita para operar de manera eficiente, vender más y hacer crecer su negocio
-              NorthWind conecta sus productos, canales de venta, ubicaciones de existencias, pedidos, almacenes, flujos de trabajo, 
-              informes y más en una solución automatizada. </p>
-              <p class="fs-4">
-                Deleite a todos en su negocio con una fuente de verdad conectada. 
-                Proporcione a sus gerentes de operaciones, finanzas, almacén y comercio electrónico las herramientas que necesitan 
-                para trabajar juntos de manera más eficiente y fluida.
-              </p>
-          </div>
+  <header class="site-header sticky-top py-1">
+    <nav class="container d-flex flex-column flex-md-row justify-content-between py-1">
+      <a href="#sobre_nw" aria-label="Logo">
+        <img src="../img/LogoWind.png" width="50em" height="50em">
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="#Contenedor_carrusel">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="#caract">Caracteristicas</a>
+      <a class="py-2 d-none d-md-inline-block" href="#planes_precios">Planes y precios</a>
+      <a class="py-2 d-none d-md-inline-block" href="..">Soporte</a>
+      <a class="py-2 d-none d-md-inline-block" href="..">Empresa</a>
+      <a class="py-2 d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contacto</a>
+      <a href="../vista/Registro.html"><button type="button" class="btn btn-lg btn_registrar">Registrarse</button></a>
+    </nav>
+  </header>
+
+  <div class="container" id="Contenedor_carrusel">
+    <br>
+    <!--INICIO-->
+    <!--Carrusel-->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/SLIDER CARRUSEL 1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/SLIDER CARRUSEL 2.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-
-      <!--CARACTERISTICAS-->
-      <div class="container px-4 py-5" id="icon-grid">
-        
-        <h2 class="display-6 text-center mb-4 border-bottom" id="caract">Caracteristicas</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col d-flex align-items-start">
-            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
-            <div>
-              <h4 class="fw-bold mb-0">Saber cuándo los niveles de stock son bajos</h4>
-              <p>Supervise sus niveles de existencias en todos los canales con actualizaciones diarias fijas por correo electrónico.</p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start">
-            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
-            <div>
-            <h4 class="fw-bold mb-0">Toma de inventario más fácil, rápida y mejor</h4>
-            <p>Realice tomas de stock flexibles basadas en su equipo y almacén, utilizando nuestra aplicación móvil. Evita tener que parar las operaciones y hazlo mucho más rápido y con mayor precisión.</p>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--INFORMACION SOBRE EL SOFTWARE-->
+    <div class="container px-4 py-5" id="sobre_nw">
+      <h2 class="display-6 text-center mb-4 border-bottom" id="sobre_n">Sobre Northwind</h2>
+      <div class="mb-4 rounded-3">
+        <div class="container-fluid">
+          <p class="fs-4">
+            NorthWind no es un ERP tradicional, un OMS independiente, WMS o sistema de inventario.
+            Northwind es un sistema enfocado a empresas minoristas.
+            Usamos una etiqueta diferente porque hacemos las cosas de manera diferente.
+            A diferencia de otras "soluciones", NorthWind está construido y desarrollado para
+            ayudar a los comerciantes modernos como usted a hacer una cosa,
+            por encima de todo: crecer sin miedo.
+          </p>
+          <p class="fs-4">
+            Todo lo que necesita para operar de manera eficiente, vender más y hacer crecer su negocio
+            NorthWind conecta sus productos, canales de venta, ubicaciones de existencias, pedidos, almacenes, flujos de
+            trabajo,
+            informes y más en una solución automatizada. </p>
+          <p class="fs-4">
+            Deleite a todos en su negocio con una fuente de verdad conectada.
+            Proporcione a sus gerentes de operaciones, finanzas, almacén y comercio electrónico las herramientas que
+            necesitan
+            para trabajar juntos de manera más eficiente y fluida.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Ventajas-->
+    <div class="container px-4" id="icon-grid">
+      <h2 class="display-6 text-center mb-4 border-bottom" id="caract">Ventajas</h2>
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <div>
+            <h4 class="fw-bold mb-0">Te damos una verdadera flexibilidad</h4>
+            <p>Es casi imposible adaptar los ERP a las necesidades únicas de su negocio
+               en crecimiento, sin personalizaciones costosas y prolongadas. 
+               Con NorthWind, se conectará a sus canales de ventas, 3PL, herramientas 
+               de contabilidad y más en minutos con nuestras integraciones Plug & Play. 
+               Añade rápida y fácilmente nuevos canales de venta y herramientas de vanguardia 
+               iempre que las necesites.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#cpu-fill"></use>
+          </svg>
+          <div>
+            <h4 class="fw-bold mb-0">Aseguramos una implementación exitosa</h4>
+            <p>Del 50% al 75% de los proyectos de implementación de ERP fallan, 
+              generalmente debido a una mala planificación, gestión de proyectos y 
+              falta de experiencia minorista. En Brightpearl, nuestra tasa de éxito de 
+              implementación es del 97% gracias a nuestro enfoque dirigido por expertos 
+              y cuidadosamente planificado.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#calendar3"></use>
+          </svg>
+          <div>
+            <h4 class="fw-bold mb-0">Priorizamos la calidad sobre la cantidad</h4>
+            <p>Los sistemas independientes generalmente vienen con características 
+              baratas "todo en uno" que comprometen la calidad y conducen a un sistema 
+              no escalable que impide el crecimiento. En NorthWind, en lugar de largas 
+              listas de características de bajo alquiler, invertimos constantemente en 
+              la mejor tecnología para ayudarlo a crecer, incluida la previsión de la demanda 
+              líder en el mercado (impulsada aún más por nuestra reciente adquisición de 
+              Inventory Planner), informes en profundidad y un motor de automatización powerful.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#home"></use>
+          </svg>
+          <div>
+            <h4 class="fw-bold mb-0">No te frenaremos</h4>
+            <p>Los sistemas de gama baja se vuelven torpes cuando los volúmenes de pedidos 
+              aumentan porque sus conexiones a plataformas de comercio electrónico y otros 
+              sistemas no pueden intercambiar datos lo suficientemente rápido. Todas nuestras 
+              integraciones están diseñadas para manejar fácilmente los picos de demanda. 
+              Procesamos más de 250,000 pedidos en un solo día sin un solo fallo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--CARACTERISTICAS-->
+    <div class="container px-4 py-5" id="icon-grid">
+
+      <h2 class="display-6 text-center mb-4 border-bottom" id="caract">Caracteristicas</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <div>
+            <h4 class="fw-bold mb-0">Saber cuándo los niveles de stock son bajos</h4>
+            <p>Supervise sus niveles de existencias en todos los canales con actualizaciones diarias fijas por correo
+              electrónico.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#cpu-fill"></use>
+          </svg>
+          <div>
+            <h4 class="fw-bold mb-0">Toma de inventario más fácil, rápida y mejor</h4>
+            <p>Realice tomas de stock flexibles basadas en su equipo y almacén, utilizando nuestra aplicación móvil.
+              Evita tener que parar las operaciones y hazlo mucho más rápido y con mayor precisión.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#calendar3"></use>
+          </svg>
           <div>
             <h4 class="fw-bold mb-0">Empaquetar virtualmente productos</h4>
-            <p>Empaquete virtualmente productos para ser vendidos juntos para promociones de marketing, sin escribir stock en kits preempaquetados.</p>
+            <p>Empaquete virtualmente productos para ser vendidos juntos para promociones de marketing, sin escribir
+              stock en kits preempaquetados.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#home"></use>
+          </svg>
           <div>
             <h4 class="fw-bold mb-0">Gestione fácilmente las variantes de productos en un solo lugar</h4>
-            <p>Cree y gestione una amplia gama de variantes para cada producto, como múltiples tamaños, colores y más para todos sus canales en un solo lugar.</p>
+            <p>Cree y gestione una amplia gama de variantes para cada producto, como múltiples tamaños, colores y más
+              para todos sus canales en un solo lugar.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#speedometer2"></use>
+          </svg>
           <div>
             <h4 class="fw-bold mb-0">Simplifique sus procesos de inventario con la automatización</h4>
-            <p>Establezca reglas para automatizar lo que sucede con los pedidos durante el embalaje en función de factores desencadenantes como la opción de entrega seleccionada, el valor y el peso.</p>
+            <p>Establezca reglas para automatizar lo que sucede con los pedidos durante el embalaje en función de
+              factores desencadenantes como la opción de entrega seleccionada, el valor y el peso.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#toggles2"></use>
+          </svg>
           <div>
             <h4 class="fw-bold mb-0">Reglas de stock automatizadas en todos los canales</h4>
             <p>Asigne una cierta cantidad de stock a sus canales de venta.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#geo-fill"></use>
+          </svg>
           <div>
             <h4 class="fw-bold mb-0">Sincronice el inventario en sus canales de ventas y ubicaciones</h4>
             <p>Sincronización de inventario totalmente automatizada, a medida que cambian sus niveles de inventario.</p>
           </div>
         </div>
         <div class="col d-flex align-items-start">
-          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+            <use xlink:href="#tools"></use>
+          </svg>
           <div>
             <h4 class="fw-bold mb-0">Pronóstico para el futuro</h4>
-            <p>Pronóstico sobre períodos anteriores de altas ventas y productos / variantes más vendidos. Tenga en cuenta el tiempo de entrega de los proveedores para que nunca más se agote o vuelva a tener exceso de existencias.</p>
+            <p>Pronóstico sobre períodos anteriores de altas ventas y productos / variantes más vendidos. Tenga en
+              cuenta el tiempo de entrega de los proveedores para que nunca más se agote o vuelva a tener exceso de
+              existencias.</p>
           </div>
         </div>
       </div>
@@ -210,9 +307,10 @@
     </div>
 
     <!-- CONTACTO -->
-    
+
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header" style="padding-left: 40%;">
@@ -221,52 +319,52 @@
           </div>
           <div class="modal-body">
             <div class="px-4 py-1 my-1 text-center">
-              <img class="d-block mx-auto mb-2" src="../img/LogoWind.png" alt="" width="62" height="47">
+              <img class="d-block mx-auto mb-2" src="../img/LogoWind.png" alt="" width="47" height="47">
               <h4 class="display-7 fw-bold" style="color: #224459;">NORTHMIND</h4>
             </div>
             <div>
               <lu>
                 <li class="d-flex gap-4">
-                  <img src="../img/message.png" alt="No disponible" width="48" height="48" >
+                  <img src="../img/message.png" alt="No disponible" width="48" height="48">
                   <div>
                     <h5 class="mb-0">Soporte vía chat</h5>
-                      Chatea directamente con nuestro centro de atención a clientes.
+                    Chatea directamente con nuestro centro de atención a clientes.
                   </div>
                 </li>
-              </ul>
-              <div class="div_contactos">
-                <br>
-                <button type="button" class="btn btn-lg botones_contacto">Chatea ahora</button>
-              </div>
+                </ul>
+                <div class="div_contactos">
+                  <br>
+                  <button type="button" class="btn btn-lg botones_contacto">Chatea ahora</button>
+                </div>
             </div>
 
 
             <br>
-            <div> 
+            <div>
               <lu>
                 <li class="d-flex gap-4">
-                  <img src="../img/email.png" alt="No disponible" width="48" height="48" >
+                  <img src="../img/email.png" alt="No disponible" width="48" height="48">
                   <div>
                     <h5 class="mb-0">Envíanos un correo electrónico</h5>
-                      Envíe sus consultas por correo electrónico y uno de nuestros expertos se comunicarán con usted.
+                    Envíe sus consultas por correo electrónico y uno de nuestros expertos se comunicarán con usted.
                   </div>
                 </li>
-              </ul>
-              <div class="div_contactos">
-                <br>
-                <button type="button" class=" btn btn-lg botones_contacto ">Enviar correo</button>
-              </div>
+                </ul>
+                <div class="div_contactos">
+                  <br>
+                  <button type="button" class=" btn btn-lg botones_contacto ">Enviar correo</button>
+                </div>
             </div>
 
 
-            <br>  
+            <br>
             <div>
               <ul>
                 <li class="d-flex gap-4">
-                  <img src="../img/phone.png" alt="No disponible" width="48" height="48" >
+                  <img src="../img/phone.png" alt="No disponible" width="48" height="48">
                   <div>
                     <h5 class="mb-0">Llámanos</h5>
-                      Póngase en contacto con nuestro equipo de soporte para una consulta gratuita
+                    Póngase en contacto con nuestro equipo de soporte para una consulta gratuita
                   </div>
                 </li>
               </ul>
@@ -277,27 +375,49 @@
             </div>
 
 
-            <br> 
+            <br>
             <div>
               <ul>
                 <li class="d-flex gap-4">
-                  <img src="../img/company.png" alt="No disponible" width="48" height="48" >
+                  <img src="../img/company.png" alt="No disponible" width="48" height="48">
                   <div>
                     <h5 class="mb-0">Cotización empresarial</h5>
-                      Póngase en contacto con el equipo de ventas de la empresa para obtener una cotización
+                    Póngase en contacto con el equipo de ventas de la empresa para obtener una cotización
                   </div>
-                </li>                
-              <div class="div_contactos">
-                <br>
-                <button type="button" class="btn btn-lg botones_contacto">Contactar a Ventas</button>
-              </div>
-            </div>   
-            
-            
+                </li>
+                <div class="div_contactos">
+                  <br>
+                  <button type="button" class="btn btn-lg botones_contacto">Contactar a Ventas</button>
+                </div>
+            </div>
+
+
           </div>
         </div>
       </div>
     </div>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="text-muted">© 2021 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"> <i class="bi-facebook"
+                style="font-size: 2rem; color: #224459;"></i></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><i class="bi-instagram"
+                style="font-size: 2rem; color: #224459;"></i></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><i class="bi-twitter"
+                style="font-size: 2rem; color: #224459;"></i></a></li>
+        </ul>
+      </footer>
+    </div>
 
 </body>
+
 </html>
