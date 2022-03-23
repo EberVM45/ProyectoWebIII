@@ -64,6 +64,12 @@ p{
       background-color: #224459;
   }
 
+  .btn_tabla{
+    border-color: white;
+    color: white;
+    background-color: #592B2B;
+  }
+
   .btn_inicio_sesion{
     color: #224459;
     background-color: white;
