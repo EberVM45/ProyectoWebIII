@@ -55,15 +55,25 @@ p{
   }
 
   .color_cad{
-    background-color: #224459;
+    background-color: #592B2B;
     color: white;
   }
 
   .btn_registrar{
-      border-color: #B8CCD9;
-      color: #B8CCD9;
-      background-color: #224459;
+      border-color: #592B2B;
+      color: white;
+      background-color: #592B2B;
   }
+
+  .btn_registrar2{
+    border-color: #224459;
+    color: white;
+    background-color: #224459;
+}
+.btn_registrar:hover{
+  background-color: #fff;
+  color: #224459;
+}
 
   .btn_tabla{
     border-color: white;
@@ -71,21 +81,9 @@ p{
     background-color: #592B2B;
   }
 
-  .btn_inicio_sesion{
-    color: #224459;
-    background-color: white;
-    height: 47px;
-  }
-
   .btn_registrar:hover{
     background-color: #fff;
-    color: #224459;
-  }
-
-  .btn_inicio_sesion:hover{
-    color: white;
-    background-color: #224459;
-    text-decoration: underline;
+    color: #592B2B;
   }
 
   .nav_bar{
