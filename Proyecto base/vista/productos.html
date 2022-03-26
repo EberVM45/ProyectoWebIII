@@ -18,7 +18,7 @@
     <!--DataTables-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="    https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
     <script >
@@ -42,31 +42,40 @@
       </nav>
     </header>
     <div class="container py-5">
-      <table class="table table-striped dt-responsive nowrap w-100" id="tablaproductos">
+      <div class="col-3">
+        <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
+          <option value="A">Almacen A</option>
+          <option value="B">Almacen B</option>
+          <option value="C">Almacen C</option>
+        </select>    
+      </div>
+      
+      <table class="table dt-responsive table-hover nowrap w-100" id="tablaproductos">
         <thead>
           <tr>
-            <th scope="col-1">Clave</th>
-            <th scope="col-1">Producto</th>
-            <th scope="col-1">Categoria</th>
-            <th scope="col-1">Existencias</th>
-            <th scope="col-3">Nivel de orden</th>
+            <th scope="col">Clave</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Existencias</th>
+            <th scope="col">Nivel de orden</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">ABBS</th>
+            <th scope="row">ABBFS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>Total: 42 
+            <td>A: 15 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
                     </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 15
-                        Almacen B: 15
-                        Almacen C: 12
-                    </ul>
+                    <ul class="dropdown-menu text-end pe-3" >
+                        <li>Almacen A: 15</li>
+                        <li> Almacen B: 15</li>
+                        <li> Almacen C: 12 </li>
+                        <li class="border-top"> Total: 42 </li>
+                  </ul>
                 </div>
             </td>
             <td>@mdo</td>
@@ -75,15 +84,16 @@
             <th scope="row">ACVV</th>
             <td>Top unitalla</td>
             <td>Blusas</td>
-            <td> Total:35 
+            <td> A:10 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
                     </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 10
-                        Almacen B: 9
-                        Almacen C: 16
+                    <ul class="dropdown-menu  text-end pe-3">
+                        <li>Almacen A: 10</li>
+                        <li>Almacen B: 9</li>
+                        <li> Almacen C: 16</li>
+                        <li class="border-top"> Total: 35 </li>
                     </ul>
                 </div>
             </td>
@@ -93,15 +103,16 @@
             <th scope="row">AABD</th>
             <td >Camisa ACDC</td>
             <td >Camisas</td>
-            <td>Total: 26 
+            <td>A: 12
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
                     </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 12
-                        Almacen B: 10
-                        Almacen C: 4
+                    <ul class="dropdown-menu text-end pe-3">
+                        <li> Almacen A: 12</li>
+                        <li> Almacen B: 10</li>
+                        <li> Almacen C: 4</li>
+                        <li class="border-top"> Total: 26 </li>
                     </ul>
                 </div>
             </td>
@@ -111,51 +122,73 @@
             <th scope="row">ABBS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>Total: 42 
+            <td>A:15
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
                     </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 15
-                        Almacen B: 15
-                        Almacen C: 12
+                    <ul class="dropdown-menu text-end pe-3">
+                        <li> Almacen A: 15</li>
+                        <li> Almacen B: 15</li>
+                        <li> Almacen C: 12</li>
+                        <li class="border-top"> Total: 26 </li>
                     </ul>
                 </div>
             </td>
             <td>@mdo</td>
           </tr>
           <tr>
-            <th scope="row">ABBD</th>
+            <th scope="row">ABBF</th>
+            <td>Pantalon Skinny</td>
+            <td>Pantalones</td>
+            <td>A: 15 
+                <div class="btn-sm btn-group dropend ">
+                    <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                    Ver detalles
+                    </button>
+                    <ul class="dropdown-menu text-end pe-3" >
+                        <li>Almacen A: 15</li>
+                        <li> Almacen B: 15</li>
+                        <li> Almacen C: 12 </li>
+                        <li class="border-top "> Total: 42 </li>
+                  </ul>
+                </div>
+            </td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">ACVV</th>
             <td>Top unitalla</td>
             <td>Blusas</td>
-            <td> Total:35 
+            <td> A:10 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
                     </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 10
-                        Almacen B: 9
-                        Almacen C: 16
+                    <ul class="dropdown-menu text-end pe-3">
+                        <li>Almacen A: 10</li>
+                        <li>Almacen B: 9</li>
+                        <li> Almacen C: 16</li>
+                        <li class="border-top "> Total: 35 </li>
                     </ul>
                 </div>
             </td>
             <td>@mdo</td>
           </tr>
           <tr>
-            <th scope="row">ABBD</th>
+            <th scope="row">AABD</th>
             <td >Camisa ACDC</td>
             <td >Camisas</td>
-            <td>Total: 26 
+            <td>A: 12
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
                     </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 12
-                        Almacen B: 10
-                        Almacen C: 4
+                    <ul class="dropdown-menu  text-end pe-3">
+                        <li> Almacen A: 12</li>
+                        <li> Almacen B: 10</li>
+                        <li> Almacen C: 4</li>
+                        <li class="border-top"> Total: 26 </li>
                     </ul>
                 </div>
             </td>
@@ -165,51 +198,16 @@
             <th scope="row">ABBS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>Total: 42 
+            <td>A: 15 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
                     </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 15
-                        Almacen B: 15
-                        Almacen C: 12
-                    </ul>
-                </div>
-            </td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">AACV</th>
-            <td>Top unitalla</td>
-            <td>Blusas</td>
-            <td> Total:35 
-                <div class="btn-sm btn-group dropend ">
-                    <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
-                    Ver detalles
-                    </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 10
-                        Almacen B: 9
-                        Almacen C: 16
-                    </ul>
-                </div>
-            </td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">DDVS</th>
-            <td >Camisa ACDC</td>
-            <td >Camisas</td>
-            <td>Total: 26 
-                <div class="btn-sm btn-group dropend ">
-                    <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
-                    Ver detalles
-                    </button>
-                    <ul class="dropdown-menu px-2">
-                        Almacen A: 12
-                        Almacen B: 10
-                        Almacen C: 4
+                    <ul class="dropdown-menu text-end pe-3">
+                        <li> Almacen A: 15</li>
+                        <li> Almacen B: 15</li>
+                        <li> Almacen C: 12</li>
+                        <li class="border-top"> Total: 26 </li>
                     </ul>
                 </div>
             </td>
