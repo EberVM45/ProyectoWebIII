@@ -109,3 +109,21 @@ p{
     width:180px;
     height:190px;
   }
+
+ .page-link{
+   color: #224459;
+ }
+  
+  .page-item.active .page-link{
+    background-color: #224459;
+    border-color: #224459;
+    color: white;
+  }
+
+  table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before{
+    background-color: #224459!important;
+  }
+  
+  table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before{
+    background-color: #592B2B!important;
+  }

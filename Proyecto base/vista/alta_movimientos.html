@@ -10,200 +10,71 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <style>
-            h3{
-                color: darkturquoise;
-                text-align: center;
-            }
-        </style>
+    <script src="estilos.css"></script>
 </head>
 
 <body>
-    <div class="conteiner-fluid">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <!--INFORMACION PERSONAL-->
-                <div class="conteiner-fluid bg-withe border border-3 border-light ">
-                    <div class="col-12 bg-dark p-2">
-                        <h3>Informacion personal</h3>
+                <!--Dar de alta-->
+                <div class="container-fluid bg-withe border border-3 border-light ">
+                    <div class="row py-2">
+                        <div class="col-12 text-center text-white py-2" style="background-color: #224459;">
+                            <h3>Registrar movimiento</h3>
+                        </div>
                     </div>
-                    <div class="row p-2">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <p class="mb-1">Nombre:</p>
-                            <input class="form-control" type="text" placeholder="Nombre">
+                    <div class="row py-2">
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1">Almacen:</p>
+                            <select class="form-select mb-lg-3 btn_tabla " aria-label="Escoge un almacen">
+                                <option value="A">Almacen A</option>
+                                <option value="B">Almacen B</option>
+                                <option value="C">Almacen C</option>
+                            </select>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <p class="mb-1">Primer apellido:</p>
-                            <input class="form-control" type="text" placeholder="Primer apellido">
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1">Tipo de movimiento:</p>
+                            <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
+                                <option value="A">Compra</option>
+                                <option value="B">Venta</option>
+                                <option value="C">Ajuste</option>
+                                <option value="C">Traspaso</option>
+                            </select>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <p class="mb-1">Segundo apellido:</p>
-                            <input class="form-control" type="text" placeholder="Segundo apellido">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1">Fecha*:</p>
+                            <input type="date" name="fecha" id="txtFecha" class="form-control">
+                        </div>
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1">Proveedor</p>
+                            <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
+                                <option value="A">Juan Perez</option>
+                                <option value="B">El pescado</option>
+                                <option value="C">EuroT</option>
+                                <option value="C">Pepe Ortiz</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1">Almacen Destino:</p>
+                            <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
+                                <option value="A">Almacen A</option>
+                                <option value="B">Almacen B</option>
+                                <option value="C">Almacen C</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <p class="mb-1">Descripcion:</p>
+                            <textarea class="form-control" placeholder="Escribe una breve descripción del movimiento" id="floatingTextarea"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <!--INFORMACION ESCOLAR-->
-                <div class="conteiner-fluid bg-withe border border-3 border-light">
-                    <div class="col-12 bg-dark p-2">
-                        <h3>Informacion escolar</h3>
-                    </div>
-                    <div class="row p-2">
-                        <div class="col-md-3">
-                            <p class="mb-1">Carrera:</p>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle form-control " type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    ---Elegir---
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Ing. Sistemas computacionales</a></li>
-                                    <li><a class="dropdown-item" href="#">Ing. Industrial</a></li>
-                                    <li><a class="dropdown-item" href="#">Ing. Ambiental</a></li>
-                                    <li><a class="dropdown-item" href="#">Ing. Gestion Empresarial</a></li>
-                                    <li><a class="dropdown-item" href="#">Gastronimia</a></li>
-                                    <li><a class="dropdown-item" href="#">Ing. Electronica</a></li>
-                                    <li><a class="dropdown-item" href="#">Ing. Sistemas Automotrices</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <p class="mb-1">Semestre:</p>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle form-control" type="button"
-                                    id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    ---Elegir---
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">1</a></li>
-                                    <li><a class="dropdown-item" href="#">2</a></li>
-                                    <li><a class="dropdown-item" href="#">3</a></li>
-                                    <li><a class="dropdown-item" href="#">4</a></li>
-                                    <li><a class="dropdown-item" href="#">5</a></li>
-                                    <li><a class="dropdown-item" href="#">6</a></li>
-                                    <li><a class="dropdown-item" href="#">7</a></li>
-                                    <li><a class="dropdown-item" href="#">8</a></li>
-                                    <li><a class="dropdown-item" href="#">9</a></li>
-                                    <li><a class="dropdown-item" href="#">10</a></li>
-                                    <li><a class="dropdown-item" href="#">11</a></li>
-                                    <li><a class="dropdown-item" href="#">12</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <!--INFORMACION ADICIONAL-->
-                <div class="conteiner-fluid bg-withe border border-3 border-light">
-                    <div class="col-12 bg-dark p-2">
-                        <h3>Informacion adicional</h3>
-                    </div>
-                    <div class="row p-2">
-                        <div class="col-md-4 col-sm-6">
-                            <p class="mb-1">Direccion:</p>
-                            <input class="form-control" type="text" placeholder="Direccion">
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <p class="mb-1">Colonia:</p>
-                            <input class="form-control" type="text" placeholder="Colonia">
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <p class="mb-1">Ciudad:</p>
-                            <input class="form-control" type="text" placeholder="Colonia">
-                        </div>
-                        <div class="col-md-2  col-sm-6">
-                            <p class="mb-1 mt-2">Estado:</p>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle form-control" type="button" id="dropdownMenuButton3"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    --Estado--
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Guanajuato</a></li>
-                                    <li><a class="dropdown-item" href="#">Estado de Mexico</a></li>
-                                    <li><a class="dropdown-item" href="#">Jalisco</a></li>
-                                    <li><a class="dropdown-item" href="#">Michoacan</a></li>
-                                    <li><a class="dropdown-item" href="#">Tamaulipas</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-5  col-sm-6">
-                            <p class="mb-1 mt-2">Telefono:</p>
-                            <input class="form-control" type="tel" placeholder="Telefono">
-                        </div>
-                        <div class="col-md-5  col-sm-6">
-                            <p class="mb-1 mt-2">Celular:</p>
-                            <input class="form-control" type="tel" placeholder="Celular">
-                        </div>
-                        <div class="col-md-2  col-sm-6">
-                            <p class="mb-1 mt-2">Estado civil:</p>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle form-control" type="button" id="dropdownMenuButton3"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    ---Elegir---
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Soltero</a></li>
-                                    <li><a class="dropdown-item" href="#">Casado</a></li>
-                                    <li><a class="dropdown-item" href="#">Union libre</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3  col-sm-6">
-                            <p class="mb-1 mt-2">Sexo:</p>
-                            <div class="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        Masculino
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        Femenino
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        Otro
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <p class="mb-1 mt-2">Tipo sanguineo:</p>
-                            <input class="form-control" type="text" placeholder="Tipo de sangre">
-                        </div>
-                        <div class="col-sm-9 col-md-6">
-                            <p class="mb-1 mt-2">Correo electronico:</p>
-                            <input type="email" class="form-control" placeholder="example@example.com">
-                        </div>
-                        <div class="col-md-6">
-                            <p class="mb-1 mt-2">Autor:</p>
-                            <input class="form-control" type="text" name="" id="" placeholder="Ingresa el autor">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
+        
     </div>
-    <div class="float-start">Float start on all viewport sizes</div><br>
-<div class="float-end">Float end on all viewport sizes</div><br>
-<div class="float-none">Don't float on all viewport sizes</div>
 </body>
 
 </html>
