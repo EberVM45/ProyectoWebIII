@@ -32,6 +32,9 @@
         $(document).ready(function () {
             $('#tablaMovimientos').DataTable();
         });
+        $(document).ready(function () {
+            $('#tablaDetalles').DataTable();
+        });
     </script>
 </head>
 
@@ -99,7 +102,7 @@
                     <div class="row py-2">
                         <div class="col-md-3 col-sm-5">
                             <p class="mb-1">Almacen Origen*:</p>
-                            <select class="form-select mb-lg-3 btn_tabla " aria-label="Escoge un almacen">
+                            <select class="form-select mb-lg-3 btn_comboNormal " aria-label="Escoge un almacen">
                                 <option value="A">Almacen A</option>
                                 <option value="B">Almacen B</option>
                                 <option value="C">Almacen C</option>
@@ -107,7 +110,7 @@
                         </div>
                         <div class="col-md-3 col-sm-5">
                             <p class="mb-1">Tipo de movimiento*:</p>
-                            <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
+                            <select class="form-select mb-3 btn_comboNormal " aria-label="Escoge un almacen">
                                 <option value="A">Compra</option>
                                 <option value="B">Venta</option>
                                 <option value="C">Ajuste</option>
@@ -122,7 +125,7 @@
                         </div>
                         <div class="col-md-3 col-sm-5">
                             <p class="mb-1">Proveedor</p>
-                            <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
+                            <select class="form-select mb-3 btn_comboNormal " aria-label="Escoge un almacen">
                                 <option value="A">Juan Perez</option>
                                 <option value="B">El pescado</option>
                                 <option value="C">EuroT</option>
@@ -131,7 +134,7 @@
                         </div>
                         <div class="col-md-3 col-sm-5">
                             <p class="mb-1">Almacen Destino:</p>
-                            <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
+                            <select class="form-select mb-3 btn_comboNormal " aria-label="Escoge un almacen">
                                 <option value="A">Almacen A</option>
                                 <option value="B">Almacen B</option>
                                 <option value="C">Almacen C</option>
@@ -142,6 +145,59 @@
                             <textarea class="form-control" placeholder="Escribe una breve descripción del movimiento"
                                 id="floatingTextarea"></textarea>
                         </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Detalles del movimiento</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1">Producto:</p>
+                            <select class="form-select mb-3 btn_comboNormal" aria-label="Escoge un almacen">
+                                <option value="no_valido">--Elige un Producto--</option>
+                                <option value="A">Pantalon</option>
+                                <option value="B">Jersey Fox</option>
+                                <option value="C">Camiseta</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1">Cantidad:</p>
+                            <input type="number" class="form-control" placeholder="0">
+                        </div>
+                        <div class="col-md-3 col-sm-5">
+                            <p class="mb-1 invisible">a</p>
+                            <button class="btn btn_Normal form-control">Agregar producto</button>
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <table class="table dt-responsive table-hover nowrap w-100" id="tablaDetalles">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pantalon</td>
+                                    <td>5</td>
+                                    <td>$1200</td>
+                                </tr>
+                                <tr>
+                                    <td>Jersey Fox</td>
+                                    <td>30</td>
+                                    <td>$3800</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-md-4 col-sm-5">
+                            <button class="btn btn_tabla form-control ">Terminar registro</button>
+                        </div>
+                        <div class="col"></div>
                     </div>
                 </div>
             </div>

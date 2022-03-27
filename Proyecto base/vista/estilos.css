@@ -138,3 +138,19 @@ p{
   table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before{
     background-color: #592B2B!important;
   }
+
+  .btn_comboNormal{
+    background-color: #224459;
+    color: white;
+  }
+
+  .btn_Normal{
+    background-color: #224459;
+    color: white;
+  }
+
+  .btn_Normal:hover{
+    background-color: white;
+    color: #224459;
+    border-color: #224459;
+  }
