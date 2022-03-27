@@ -25,13 +25,18 @@
         $(document).ready( function () {
             $('#tablaproductos').DataTable();
         } );
+        
     </script>
         
     <title>Productos</title>
   </head>
   <body>
+    
     <!--NAVBAR-->
     <header class="site-header sticky-top py-1">
+
+      
+      
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,7 +105,7 @@
             <th scope="row">ABBFS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A: 15 
+            <td>A:  <label id="existencias_al1">15</label> 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -113,13 +118,13 @@
                   </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden1">13</td>
           </tr>
           <tr>
             <th scope="row">ACVV</th>
             <td>Top unitalla</td>
             <td>Blusas</td>
-            <td> A:10 
+            <td> A: <label id="existencias_al2">10</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -132,13 +137,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden2">24</td>
           </tr>
           <tr>
             <th scope="row">AABD</th>
             <td >Camisa ACDC</td>
             <td >Camisas</td>
-            <td>A: 12
+            <td>A: <label id="existencias_al2">12</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -151,13 +156,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden3">32</td>
           </tr>
           <tr>
             <th scope="row">ABBS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A:15
+            <td>A: <label id="existencias_al4">15</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -170,13 +175,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden4">14</td>
           </tr>
           <tr>
             <th scope="row">ABBF</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A: 15 
+            <td>A: <label id="existencias_al5">15</label>  
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -189,13 +194,13 @@
                   </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n-orden5">14</td>
           </tr>
           <tr>
             <th scope="row">ACVV</th>
             <td>Top unitalla</td>
             <td>Blusas</td>
-            <td> A:10 
+            <td> A:<label id="existencias_al6">10</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -208,13 +213,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden6">14</td>
           </tr>
           <tr>
             <th scope="row">AABD</th>
             <td >Camisa ACDC</td>
             <td >Camisas</td>
-            <td>A: 12
+            <td>A: <label id="existencias_al7">12</label> 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -227,13 +232,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden7">10</td>
           </tr>
           <tr>
             <th scope="row">ABBS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A: 15 
+            <td>A: <label id="existencias_al8">15</label>  
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -246,7 +251,7 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden8">12</td>
           </tr>
         </tbody>
       </table>
