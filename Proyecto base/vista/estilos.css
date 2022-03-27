@@ -23,7 +23,10 @@ p{
   user-select: none;
 }
 
-
+.minuaturas_estilo:hover{
+  color: white;
+  background-color: #592B2B;
+}
 /*#Contenedor_carrusel{
   height: 150px;
 }*/
