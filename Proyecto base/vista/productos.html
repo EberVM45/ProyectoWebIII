@@ -25,22 +25,62 @@
         $(document).ready( function () {
             $('#tablaproductos').DataTable();
         } );
+        
     </script>
         
     <title>Productos</title>
   </head>
   <body>
+    
     <!--NAVBAR-->
     <header class="site-header sticky-top py-1">
-      <nav class="container d-flex flex-column flex-md-row justify-content-between py-1">
-        <a href="#sobre_n" aria-label="Logo">
-          <img src="../img/LogoWind.png" width="50em" height="50em">
-        </a>
-        <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-        <a class="py-2 d-none d-md-inline-block" href="./productos.html">Productos</a>
-        <a class="py-2 d-none d-md-inline-block" href="./movimientos.html">Movimientos</a>
+
+      
+      
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../img/menui.png" alt="" width="40em" height="50em">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a href="#sobre_n" class="navbar-brand d-none d-lg-flex" aria-label="Logo">
+              <img src="../img/LogoWind.png" width="50em" height="50em">
+            </a>
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-flex d-sm-inline d-md-inline">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../vista/index.html#caract">Caracteristicas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../vista/index.html#planes_precios">Planes y precios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../vista/index.html#soporte">Soporte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../vista/index.html#sobre_n">Empresa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./movimientos.html">Movimientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contacto</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <a href="../vista/Registro.html"><button type="button" class="btn btn-lg btn_registrar">Registrarse</button></a>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
+    <!--Tablas productos-->
     <div class="container py-5">
       <div class="col-3">
         <select class="form-select mb-3 btn_tabla " aria-label="Escoge un almacen">
@@ -65,7 +105,7 @@
             <th scope="row">ABBFS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A: 15 
+            <td>A:  <label id="existencias_al1">15</label> 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -78,13 +118,13 @@
                   </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden1">13</td>
           </tr>
           <tr>
             <th scope="row">ACVV</th>
             <td>Top unitalla</td>
             <td>Blusas</td>
-            <td> A:10 
+            <td> A: <label id="existencias_al2">10</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -97,13 +137,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden2">24</td>
           </tr>
           <tr>
             <th scope="row">AABD</th>
             <td >Camisa ACDC</td>
             <td >Camisas</td>
-            <td>A: 12
+            <td>A: <label id="existencias_al2">12</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -116,13 +156,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden3">32</td>
           </tr>
           <tr>
             <th scope="row">ABBS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A:15
+            <td>A: <label id="existencias_al4">15</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -135,13 +175,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden4">14</td>
           </tr>
           <tr>
             <th scope="row">ABBF</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A: 15 
+            <td>A: <label id="existencias_al5">15</label>  
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -154,13 +194,13 @@
                   </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n-orden5">14</td>
           </tr>
           <tr>
             <th scope="row">ACVV</th>
             <td>Top unitalla</td>
             <td>Blusas</td>
-            <td> A:10 
+            <td> A:<label id="existencias_al6">10</label>
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -173,13 +213,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden6">14</td>
           </tr>
           <tr>
             <th scope="row">AABD</th>
             <td >Camisa ACDC</td>
             <td >Camisas</td>
-            <td>A: 12
+            <td>A: <label id="existencias_al7">12</label> 
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -192,13 +232,13 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden7">10</td>
           </tr>
           <tr>
             <th scope="row">ABBS</th>
             <td>Pantalon Skinny</td>
             <td>Pantalones</td>
-            <td>A: 15 
+            <td>A: <label id="existencias_al8">15</label>  
                 <div class="btn-sm btn-group dropend ">
                     <button type="button" class="btn text-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                     Ver detalles
@@ -211,7 +251,7 @@
                     </ul>
                 </div>
             </td>
-            <td>@mdo</td>
+            <td id="n_orden8">12</td>
           </tr>
         </tbody>
       </table>
