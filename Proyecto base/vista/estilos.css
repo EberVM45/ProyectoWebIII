@@ -82,6 +82,12 @@ p{
     background-color: #592B2B;
   }
 
+  .btn_tabla:hover{
+    border-color: #592B2B;
+    color: #592B2B;
+    background-color: white;
+  }
+
   .btn_registrar:hover{
     background-color: #fff;
     color: #592B2B;
