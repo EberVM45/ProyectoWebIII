@@ -24,8 +24,15 @@
     <script >
         $(document).ready( function () {
             $('#tablaproductos').DataTable();
+/*            $('#tablaproductos tr').find('td li label :eq(3)').each(function(){
+              valor=$(this).html();
+              console.log("Valor 1: "+ valor);
+            });
+            $('#tablaproductos tr').find('td:eq(2)').each(function(){
+                valor2=$(this).html();
+                console.log("Valor 2: "+valor2) ;
+            });*/
         } );
-        
     </script>
         
     <title>Productos</title>
@@ -39,13 +46,14 @@
       
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <a href="#sobre_n" class="navbar-brand d-lg-flex" aria-label="Logo">
+            <img src="../img/LogoWind.png" width="50em" height="50em">
+          </a>
+          <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <img src="../img/menui.png" alt="" width="40em" height="50em">
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a href="#sobre_n" class="navbar-brand d-none d-lg-flex" aria-label="Logo">
-              <img src="../img/LogoWind.png" width="50em" height="50em">
-            </a>
+            
             
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-flex d-sm-inline d-md-inline">
               <li class="nav-item">
@@ -137,7 +145,7 @@
                     </ul>
                 </div>
             </td>
-            <td id="n_orden2">24</td>
+            <td id="n_orden2" class="bg-danger">24</td>
           </tr>
           <tr>
             <th scope="row">AABD</th>
@@ -156,7 +164,7 @@
                     </ul>
                 </div>
             </td>
-            <td id="n_orden3">32</td>
+            <td id="n_orden3" class="bg-danger">32</td>
           </tr>
           <tr>
             <th scope="row">ABBS</th>
@@ -175,7 +183,7 @@
                     </ul>
                 </div>
             </td>
-            <td id="n_orden4">14</td>
+            <td id="n_orden4" >14</td>
           </tr>
           <tr>
             <th scope="row">ABBF</th>
@@ -194,7 +202,7 @@
                   </ul>
                 </div>
             </td>
-            <td id="n-orden5">14</td>
+            <td id="n-orden5" >14</td>
           </tr>
           <tr>
             <th scope="row">ACVV</th>
@@ -213,7 +221,7 @@
                     </ul>
                 </div>
             </td>
-            <td id="n_orden6">14</td>
+            <td id="n_orden6" class="bg-danger">14</td>
           </tr>
           <tr>
             <th scope="row">AABD</th>
