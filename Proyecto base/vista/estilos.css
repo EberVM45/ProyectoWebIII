@@ -157,3 +157,8 @@ p{
     color: #224459;
     border-color: #224459;
   }
+
+  .btnCrearCuenta{
+    background-color: darkturquoise;
+    color: white;
+  }
