@@ -18,9 +18,9 @@
 
 <body>
     <div class="container">
-        <div class="row mt-5 rounded rounded-3 shadow-lg">
+        <div class="row mt-5 rounded rounded-3 shadow-lg divShadow">
             <!--LOGIN-->
-            <div class="col mb-5 mt-5">
+            <div class="col moverDatos mb-5 mt-5">
                     <div class="row text-center">
                         <div class="col mb-1">
                             <h3 class="fs-1" style="color: #224459">Sign in to Northwind</h3>
@@ -40,19 +40,29 @@
                       </div>
                   </div>  
             </div>
-            <div class="col-5 rounded rounded-3" style="background-image: url('../img/login_fondo_v.jpg');">
-                    <div class="row text-center ">
+            <div class="col-5 moverImagen rounded rounded-3" style="background-image: url('../img/login_fondo_v.jpg');">
+                    <div class="row text-center desaparece">
                         <div class="col mt-5">
                             <h3 class="fs-1" style="color: white;">Hola!</h3>
                             <p class="text-white text-center fs-4 fw-bold">¿Eres un nuevo usuario?, perfecto, por favor da clic en el boton siguiente para crear una nueva cuenta</p>
                         </div>
                     </div>
-                    <div class="row mb-2 mt-1">
+                    <div class="row text-center aparece">
+                      <div class="col mt-5">
+                          <h3 class="fs-1" style="color: white;">Hola!</h3>
+                          <p class="text-white text-center fs-4 fw-bold">Para ingresar si ya tienes cuenta presiona el boton siguiente por favor.</p>
+                      </div>
+                    </div>
+                    <div class="row mb-2 mt-1 desaparece">
                         <div class="col d-flex justify-content-center">
-                            <button class="btn btnCrearCuenta col-4 rounded-pill fs-4">Sign up</button>
+                            <button class="btn boton btnCrearCuenta col-4 rounded-pill fs-4">Sign up</button>
                         </div>
                     </div>
-                
+                    <div class="row mb-2 mt-1 aparece">
+                      <div class="col d-flex justify-content-center">
+                          <button class="btn boton btnCrearCuenta col-4 rounded-pill fs-4">Sign in</button>
+                      </div>
+                  </div>
             </div>
         </div>
     </div>
