@@ -180,11 +180,13 @@ p{
     width: 800px;
     height: 430px;
     position: absolute;
-    animation-name: moverD;
-    animation-duration: 2s;
-    animation-delay: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
+  }
+
+  .moverDatos2{
+    margin-left: 350px;
+    width: 800px;
+    height: 430px;
+    position: absolute;
   }
 
   .divShadow{
