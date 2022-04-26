@@ -163,26 +163,37 @@ p{
     color: white;
   }
 
-  .moverImagen{
+  .divImagenMedidas{
     margin-left: 800px;
     width: 350px;
     height: 430px;
     position: absolute;
+  }
+
+  .moverImagen{
     animation-name: moverse;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
   }
 
-  .moverDatos{
+  .moverRegreso{
+    animation-name: moverse_reves;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .divDatosInicio{
     margin-left: 0px;
     width: 800px;
     height: 430px;
     position: absolute;
+    opacity: 100;
   }
 
-  .moverDatos2{
+  .divDatosRegistro{
+    opacity: 0;
     margin-left: 350px;
     width: 800px;
     height: 430px;
@@ -194,21 +205,28 @@ p{
     height: 430px;
   }
 
-  .aparece{
+  .elementoOculto{
     position: absolute;
     opacity: 0;
+  }
+
+  .elementoVisible{
+    position: absolute;
+    opacity: 100;
+  }
+
+  .aparece{
     animation-name: aparecer;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
   }
+
   .desaparece{
     position: absolute;
     opacity: 100;
     animation-name: desaparecer;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
   }
@@ -220,21 +238,21 @@ p{
     height: 50px;
   }
 
-  @keyframes moverD {
-    0%{
-      margin-left: 0px;
-    }
-    100%{
-      margin-left: 350px;
-    }
-  }
-
   @keyframes moverse {
     0%{
       margin-left: 800px;
     }
     100%{
       margin-left: 0px;
+    }
+  }
+
+  @keyframes moverse_reves {
+    0%{
+      margin-left: 0px;
+    }
+    100%{
+      margin-left: 800px;
     }
   }
 
