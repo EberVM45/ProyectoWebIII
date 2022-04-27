@@ -215,6 +215,20 @@ p{
     opacity: 100;
   }
 
+  .textoOculto{
+    position: absolute;
+    opacity: 0;   
+    margin-left: 35px;
+    margin-top: -18px;
+  }
+
+  .textoVisible{
+    position: absolute;
+    opacity: 100;
+    margin-left: 35px;
+    margin-top: -18px;
+  }
+
   .aparece{
     animation-name: aparecer;
     animation-duration: 1s;
