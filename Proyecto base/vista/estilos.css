@@ -287,3 +287,272 @@ p{
       opacity: 0;
     }
   }
+    /*Estilos Login*/
+    .btn-submit{
+      border-color: #592B2B;
+  
+      color: white;
+      background-color: #592B2B;
+      
+  }
+  .btn-submit:hover{
+      background-color: #fff;
+      color: #224459;
+      
+      font-weight: bold;
+      
+  }
+  .colors{
+      color: #224459;
+  }
+  .div-padre{
+      width: 900px;
+      height: 500px;
+      margin: 90px auto;
+      border-radius: 25px;
+      border: solid rgb(192, 192, 192) 1px;
+      background: white;
+    
+  }
+  .div_form2{
+      width: 300px;
+      margin-left: 400px;
+      z-index: 3;
+      background: white;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  
+  }
+  .div_form1{
+      width: 450px;
+      height: 500px;
+      transform: translatey(-422px);
+      background: white;
+      border-radius: 0 25px 25px 0;
+  
+      margin-right: 0;
+      z-index: 2;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  
+  }
+  .welcome{
+      width: 450px;
+      height: 500px;
+      position: absolute;
+      transform: translatey(-1px);
+      display: flex;
+      margin-left: -1px;
+      background:#3E6E8C;
+      background-size: 300%;
+      border-top-left-radius: 25px;
+      border-end-start-radius: 25px;
+      background-repeat: no-repeat;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+  }
+  .bodyRegistro{
+      margin-top: 15px;
+      display: flex;
+      background: url("../img/5417730.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100vh;
+      background-size: 140%;
+  
+  }
+  
+  .animacion{
+      animation-name: desplazar;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  .letras2{
+      position: absolute;
+      opacity: 0;
+      top: -40px;
+  }
+  .letras1{
+      
+      z-index: 1;
+  }
+  .animacion3{
+      animation-name: desplazar3;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-timing-function: cubic-bezier(0, 1.23, 1, 1);
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  
+  
+  .animacion4{
+      animation-name: desplazar4;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  .letrasmover{
+      animation-name: moverletras;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      z-index: 1;
+  }
+  @keyframes moverletras{
+      0%{
+  
+      }
+      100%{
+          opacity: 0;
+      }
+  }
+  .letrasmover2{
+      animation-name: moverletras2;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      z-index: 1;
+  }
+  @keyframes moverletras2{
+      0%{
+  
+      }
+      50%{
+          opacity: 1;
+      }
+      100%{
+          top: 170px;
+          opacity: 1;
+          
+      }
+  }
+  
+  .letrasmover3{
+      animation-name: moverletras3;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      z-index: 1;
+  }
+  @keyframes moverletras3{
+      0%{
+  
+      }
+      50%{
+          opacity: 0;
+      }
+      100%{
+          top: -44px;
+          opacity: 0;
+          
+      }
+  }
+  @keyframes desplazar{
+      0%{
+          margin-left: -1;
+      }
+      20%{
+          transform: scaleX(1.2);
+          border-radius: 0;
+      }
+      59%{
+          transform: scale(1);
+          
+      }
+      100%{
+          margin-left:450px;
+          border-top-left-radius: 0;
+          border-end-start-radius: 0;
+          border-end-end-radius: 25px;
+          border-top-right-radius: 25px;
+          
+      }
+      
+  }
+  @keyframes desplazar4{
+      0%{
+          margin-left:450px;
+  
+      }
+      10%{
+          transform: scaleX(1.2);
+          border-radius: 0;
+          
+      }
+      60%{
+          transform: scale(1);
+      }
+      
+      100%{
+          margin-left: -1;
+          border-radius: 25px 0 0 25px;
+      }
+      
+  }
+  
+  @keyframes desplazar2{
+      0%{
+  
+      }
+      50%{
+          opacity: 0;
+      }
+      100%{
+          margin-left:300px;
+          border-end-end-radius: 25px;
+          border-top-right-radius: 25px;
+          z-index: 2;
+          opacity: 0;
+      }
+      
+  }
+  @keyframes desplazar3{
+      0%{
+          margin-left:400px;
+      }
+      25%{
+          opacity: 1;
+          
+      }
+      100%{
+          margin-left:0;
+          border-top-left-radius: 25px;
+          border-end-start-radius: 25px;
+          z-index: 2;
+          opacity: 1;
+      }
+      
+  }
+  @keyframes desplazar5{
+      0%{
+          margin-left:0;
+      }
+      100%{
+          margin-left:400px;
+          z-index: 3;
+          opacity: 0;
+      }
+      
+  }
+  .animacion5{
+      animation-name: desplazar5;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  .header-registro{
+    position: absolute;
+    
+  }

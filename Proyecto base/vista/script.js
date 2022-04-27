@@ -1,4 +1,4 @@
-var btnSignUp = document.getElementById('btnSignUp');
+/*var btnSignUp = document.getElementById('btnSignUp');
 var divDatosInicio = document.getElementById('datosInicio');
 var divdatosRegistro = document.getElementById('datosRegistro');
 var divImagen = document.getElementById('divImagen');
@@ -49,5 +49,37 @@ function animacion() {
         click=true;
     }
 }
+*/
+let welcome=document.getElementById('welcome');
+let div_form2=document.getElementById('div_form2');
+let letras1=document.getElementById('letras1');
+let letras2=document.getElementById('letras2');
+function mover()
+{
+  welcome.classList.add('animacion');
+  div_form2.classList.add('animacion3');
+  letras1.classList.add('letrasmover');
+  letras2.classList.add('letrasmover2');
+  
+  welcome.classList.remove('animacion4');
+  letras1.classList.remove('letrasmover4');
+  letras2.classList.remove('letrasmover3');
+  div_form2.classList.remove('animacion5')
 
+}
+function mover2()
+{
+  welcome.classList.remove('animacion');
+  div_form2.classList.remove('animacion3');
+  letras1.classList.remove('letrasmover');
+  letras2.classList.remove('letrasmover2');
+
+  div_form2.classList.add('animacion5')
+  welcome.classList.add('animacion4');
+  letras1.classList.add('letrasmover4');
+  letras2.classList.add('letrasmover3');
+  
+  
+
+}
 
