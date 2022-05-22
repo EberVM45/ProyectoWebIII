@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/product/">
+    <title>Reporte productos</title>
+    <!--Icono Pestaña-->
+    <link rel="shortcut icon" href="../img/LogoWind.png" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Estilos -->
+    <link href="estilos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+    <header class="site-header sticky-top py-1">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="#sobre_n" class="navbar-brand d-lg-flex" aria-label="Logo">
+                    <img src="../img/LogoWind.png" width="50em" height="50em">
+                </a>
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <img src="../img/menui.png" alt="" width="40em" height="50em">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-flex d-sm-inline d-md-inline">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="../vista/index.html#caract">Caracteristicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vista/index.html#planes_precios">Planes y precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vista/index.html#soporte">Soporte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vista/index.html#sobre_n">Empresa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./movimientos.html">Movimientos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                              <button class="btn btn_registrar2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Reportes
+                              </button>
+                              <ul class="dropdown-menu bg-dark text-light" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="./Reporte_Productos.html">Productos vendidos</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="../vista/Registro.html"><button type="button"
+                                class="btn btn-lg btn_registrar">Registrarse</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="dashboard_div">
+        <div id="filter_div"></div>
+        <div id="chart_div"></div>
+        <div id="table_div"></div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        google.charts.load('current', { 'packages': ['corechart', 'controls'] });
+        google.charts.load('current', { 'packages': ['table'] });
+        google.charts.setOnLoadCallback(drawDashboard);
+
+        function drawDashboard() {
+            var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+            var MesSlider = new google.visualization.ControlWrapper({
+                'controlType': 'NumberRangeFilter',
+                'containerId': 'filter_div',
+                'options': {
+                    'filterColumnLabel': 'mes',
+                    'minValue': 1,
+                    'maxValue': 12
+                },
+                'state': { 'lowValue': 1, 'highValue': 12 }
+            });
+
+            var lineChart = new google.visualization.ChartWrapper({
+                'chartType': 'LineChart',
+                'containerId': 'chart_div',
+                'options': {
+                    'width': 500,
+                    'height': 500,
+                    'title': 'Productos Vendidos'
+                },
+                'view': { 'columns': [0, 1] }
+            });
+
+            var tableChart = new google.visualization.ChartWrapper({
+                'chartType': 'Table',
+                'containerId': 'table_div',
+                'options': {
+                    'width': 300,
+                    'height': 300
+                },
+                'view': { 'columns': [0, 1] }
+            });
+            dashboard.bind(MesSlider, [lineChart, tableChart]);
+
+            fetch("https://localhost:44379/api/Employees/Productos_mes?anio=1997&idProducto=1")
+                .then(response => response.json())
+                .then(data => {
+                    var datos = [["mes", "ventas"]];
+                    for (var key in data) {
+                        datos.push([data[key].mes, data[key].ventas])
+                    }
+                    console.log(datos);
+                    dashboard.draw(google.visualization.arrayToDataTable(datos));
+                })
+                .catch(error => console.log('Unable to get items.', error));
+        }
+
+    </script>
+</body>
+
+</html>
