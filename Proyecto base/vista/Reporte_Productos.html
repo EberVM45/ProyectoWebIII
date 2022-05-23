@@ -21,7 +21,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="llenarComboProducto()">
 
     <!--NAVBAR-->
     <header class="site-header sticky-top py-1">
@@ -86,66 +86,110 @@
         </nav>
     </header>
 
-    <div id="dashboard_div">
-        <div id="filter_div"></div>
-        <div id="chart_div"></div>
-        <div id="table_div"></div>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="anio" class="form-label">Año:</label>
+                <select id="anio" class="form-select" onchange="consultar()">
+                    <option selected>1996</option>
+                    <option>1997</option>
+                    <option>1998</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="productList" class="form-label">Producto:</label>
+                <select id="productList" class="form-select" onchange="consultar()">
+                </select>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row align-items-center" id="dashboard_div">
+                <div class="col-12 mt-4" id="filter_div"></div>
+                <div class="col-lg-5" id="chart_div"></div>
+                <div class="col-lg-5 offset-md-1" id="table_div"></div>
+            </div>
+        </div>
     </div>
+
+
+
+    <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-
-        google.charts.load('current', { 'packages': ['corechart', 'controls'] });
-        google.charts.load('current', { 'packages': ['table'] });
-        google.charts.setOnLoadCallback(drawDashboard);
-
-        function drawDashboard() {
-            var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
-            var MesSlider = new google.visualization.ControlWrapper({
-                'controlType': 'NumberRangeFilter',
-                'containerId': 'filter_div',
-                'options': {
-                    'filterColumnLabel': 'mes',
-                    'minValue': 1,
-                    'maxValue': 12
-                },
-                'state': { 'lowValue': 1, 'highValue': 12 }
-            });
-
-            var lineChart = new google.visualization.ChartWrapper({
-                'chartType': 'LineChart',
-                'containerId': 'chart_div',
-                'options': {
-                    'width': 500,
-                    'height': 500,
-                    'title': 'Productos Vendidos'
-                },
-                'view': { 'columns': [0, 1] }
-            });
-
-            var tableChart = new google.visualization.ChartWrapper({
-                'chartType': 'Table',
-                'containerId': 'table_div',
-                'options': {
-                    'width': 300,
-                    'height': 300
-                },
-                'view': { 'columns': [0, 1] }
-            });
-            dashboard.bind(MesSlider, [lineChart, tableChart]);
-
-            fetch("https://localhost:44379/api/Employees/Productos_mes?anio=1997&idProducto=1")
+        function llenarComboProducto() {
+            fetch("https://localhost:44379/api/Employees/Products")
                 .then(response => response.json())
                 .then(data => {
-                    var datos = [["mes", "ventas"]];
+                    var datos = [];
                     for (var key in data) {
-                        datos.push([data[key].mes, data[key].ventas])
+                        datos.push([data[key].productId, data[key].productName]);
                     }
-                    console.log(datos);
-                    dashboard.draw(google.visualization.arrayToDataTable(datos));
+                    var cmbProducto = document.getElementById("productList");
+                    for (var i = 0; i < datos.length; i++) {
+                        cmbProducto.options[i] = new Option(datos[i][1]);
+                    }
+                    consultar();
                 })
                 .catch(error => console.log('Unable to get items.', error));
         }
 
+        function consultar() {
+            var anioC = document.getElementById("anio").value;
+            var productoC = document.getElementById("productList").value;
+            var url = "https://localhost:44379/api/Employees/Productos_mes?anio=" + anioC + "&idProducto=" + productoC + "";
+            google.charts.load('current', { 'packages': ['corechart', 'controls'] });
+            google.charts.load('current', { 'packages': ['table'] });
+            google.charts.setOnLoadCallback(drawDashboard);
+
+            function drawDashboard() {
+                var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+                var MesSlider = new google.visualization.ControlWrapper({
+                    'controlType': 'NumberRangeFilter',
+                    'containerId': 'filter_div',
+                    'options': {
+                        'filterColumnLabel': 'MES',
+                        'minValue': 1,
+                        'maxValue': 12
+                    },
+                    'state': { 'lowValue': 1, 'highValue': 12 }
+                });
+
+                var lineChart = new google.visualization.ChartWrapper({
+                    'chartType': 'LineChart',
+                    'containerId': 'chart_div',
+                    'options': {
+                        'width': 600,
+                        'height': 600,
+                        'title': 'PRODUCTOS VENDIDOS POR MES',
+                        'colors': ['#224459']
+                    },
+                    'view': { 'columns': [0, 1] }
+                });
+
+                var tableChart = new google.visualization.ChartWrapper({
+                    'chartType': 'Table',
+                    'containerId': 'table_div',
+                    'options': {
+                        'width': 400,
+                        'height': 400
+                    },
+                    'view': { 'columns': [0, 1] }
+                });
+                dashboard.bind(MesSlider, [lineChart, tableChart]);
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        var datos = [["MES", "VENTAS"]];
+                        for (var key in data) {
+                            datos.push([data[key].mes, data[key].ventas])
+                        }
+                        console.log(datos);
+                        dashboard.draw(google.visualization.arrayToDataTable(datos));
+                    })
+                    .catch(error => console.log('Unable to get items.', error));
+            }
+        }
     </script>
 </body>
 
