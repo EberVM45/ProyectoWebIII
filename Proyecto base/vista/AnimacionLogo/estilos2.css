@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    ;
+}
+#contenedor{
+    height: 100vh;
+    display: flex;
+    padding-top: 20%;
+    position: relative;
+    padding-left: 40%;
+    background-color: white;
+}
+
+.visible {
+    display: block!important;
+}
+
+.invisible {
+    display: none!important;
+}
+
+.ima_fondo{
+    width: 200px;
+    height: 200px;
+    position: absolute;    
+    border-radius: 50%;
+    border: solid 2px white;
+    background: radial-gradient(white,#1d6592,#ff0101,#0e9220,#fffb14,#ff0101);
+    background-size: 2000px 2000px;
+    animation-name: degradados;
+    animation-duration: 10s;
+    animation-timing-function:ease;    
+    animation-iteration-count: infinite;
+}
+.img_elices{
+    position: absolute;   
+    z-index: 1; 
+    color: black;
+    padding-bottom: 2px;
+    animation-name: girodesapareciendo;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    
+}
+.img_letras{
+    position: absolute;    
+    z-index: 2; 
+    animation-name: giro;
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes giro {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(-720deg);
+    }
+}
+@keyframes girodesapareciendo {
+    0%{
+        opacity: 1;
+    padding-bottom: 2px;
+
+    }
+
+    35%{
+
+        padding-bottom: 2px;
+        opacity: 0;
+    }
+    75%{
+        padding-bottom: 2px;
+        opacity: 1;
+
+    }
+    100%{
+        padding-bottom: 2px;
+        transform: rotate(440deg);
+        opacity: 1;
+    }
+}
+@keyframes degradados {
+    0%{
+        
+        background-position: 0 50%;
+    }
+    
+    50%{
+        background-position: 100% 50%;
+
+    }
+    
+    100%{
+        background-position: 0 50%;
+    }
+}
