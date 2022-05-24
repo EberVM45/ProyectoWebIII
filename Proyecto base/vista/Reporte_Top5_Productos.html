@@ -29,7 +29,7 @@
       <img src="AnimacionLogo/imgs/Elices.png" width="200px" height="209px"  class="img_elices" alt="">
       <img src="AnimacionLogo/imgs/Letras.png" width="200px" height="215px"  class="img_letras" alt="">
     
-  </div>
+    </div>
 
     <!--NAVBAR-->
     <header class="site-header sticky-top py-1">
@@ -78,7 +78,7 @@
                               Reportes
                             </button>
                             <ul class="dropdown-menu bg-dark text-light" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="./Reporte_Almacenes.html">Ventas Almacen</a></li>
                               <li><a class="dropdown-item" href="./Reporte_Productos.html">Productos vendidos</a></li>
                               <li><a class="dropdown-item" href="./Reporte_Top5_Productos.html">Top 5 productos</a></li>
                             </ul>
@@ -104,11 +104,7 @@
     <div class="row">
       <div class="col-12 col-lg-6 mb-3">
         <label for="ano" class="form-label">Año</label>
-        <select class="form-select" id="ano" name="ano">
-          <option value="1996" selected>1996</option>
-          <option value="1997">1997</option>
-          <option value="1998">1998</option>
-      </select>
+        <input type="number" class="form-control" id="ano">
       </div>
       <div class="col-12 col-lg-6 mb-3">
         <label for="trimestre" class="form-label">Trimestre</label>
@@ -120,7 +116,7 @@
       </select>
       </div>
     </div>
-    <button id="btnEnv" class="btn btn-success" onclick="cargarDatos()">Generar reporte</button>
+    <button id="btnEnv" class="btn btn_registrar" onclick="cargarDatos()">Generar reporte</button>
   </div>
 
     <!--Div that will hold the dashboard-->

@@ -14,6 +14,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Estilos -->
     <link href="estilos.css" rel="stylesheet">
+    <link href="AnimacionLogo/estilos2.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -22,6 +23,13 @@
 </head>
 
 <body onload="llenarComboProducto()">
+
+    <div id="contenedor">
+        <div class="ima_fondo"></div>
+        <img src="AnimacionLogo/imgs/Elices.png" width="200px" height="209px"  class="img_elices" alt="">
+        <img src="AnimacionLogo/imgs/Letras.png" width="200px" height="215px"  class="img_letras" alt="">
+      
+      </div>
 
     <!--NAVBAR-->
     <header class="site-header sticky-top py-1">
@@ -70,7 +78,7 @@
                                 Reportes
                               </button>
                               <ul class="dropdown-menu bg-dark text-light" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="./Reporte_Almacenes.html">Ventas Almacen</a></li>
                                 <li><a class="dropdown-item" href="./Reporte_Productos.html">Productos vendidos</a></li>
                                 <li><a class="dropdown-item" href="./Reporte_Top5_Productos.html">Top 5 productos</a></li>
                               </ul>
@@ -117,6 +125,10 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         function llenarComboProducto() {
+
+            /*INICIA LOADER*/
+            var carga = document.getElementById('contenedor');
+            carga.style.visibility='visible';
             fetch("https://localhost:44379/api/Employees/Products")
                 .then(response => response.json())
                 .then(data => {
@@ -176,6 +188,11 @@
                     'view': { 'columns': [0, 1] }
                 });
                 dashboard.bind(MesSlider, [lineChart, tableChart]);
+
+                /*FINALIZA LOADER*/
+                var carga = document.getElementById('contenedor');
+                carga.style.visibility='hidden';
+
 
                 fetch(url)
                     .then(response => response.json())
