@@ -24,6 +24,13 @@
 
   <body>
 
+    <div id="contenedor">
+      <div class="ima_fondo"></div>
+      <img src="AnimacionLogo/imgs/Elices.png" width="200px" height="209px"  class="img_elices" alt="">
+      <img src="AnimacionLogo/imgs/Letras.png" width="200px" height="215px"  class="img_letras" alt="">
+    
+  </div>
+
     <!--NAVBAR-->
     <header class="site-header sticky-top py-1">
       <nav class="navbar navbar-expand-lg">
@@ -116,25 +123,16 @@
     <button id="btnEnv" class="btn btn-success" onclick="cargarDatos()">Generar reporte</button>
   </div>
 
-  <div id="contenedor" class="visible invisible">
-    <div class="ima_fondo"></div>
-    <img src="AnimacionLogo/imgs/Elices.png" width="200px" height="209px"  class="img_elices" alt="">
-    <img src="AnimacionLogo/imgs/Letras.png" width="200px" height="215px"  class="img_letras" alt="">
-  
-</div>
     <!--Div that will hold the dashboard-->
-    <div id="dashboard_div">
-      <!--Divs that will hold each control and chart-->
-      <div id="columnchart_values"></div>
+
+    <div class="reporte">
+      <div id="dashboard_div"></div>
+        <!--Divs that will hold each control and chart-->
+        <div id="columnchart_values"></div>
+    </div>
+    
       <script type="text/javascript">
 
-      $(document).ajaxStart(function() {
-        $("#contenedor").addClass('visible');
-      });
-
-      $(document).ajaxStop(function() {
-        $("#contenedor").removeClass('visible');
-      });
 
         // Load the Visualization API and the controls package.
         google.charts.load('current', {'packages':['corechart']});
@@ -149,8 +147,9 @@
           var anio = document.getElementById("ano").value;
           var trim = document.getElementById("trimestre").value;
 
-
-          const carga = document.getElementById("contenedor");
+          /*APARICION DEL LOADER*/
+          var carga = document.getElementById('contenedor');
+          carga.style.visibility='visible';
           
             fetch('https://localhost:44379/api/Employees/productos_trim?ano='+anio+'&trimestre='+trim+'')
                 .then(response => response.json())
@@ -164,7 +163,7 @@
         function drawChart(productos) {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'producto');
-        data.addColumn('number','cantidad');
+        data.addColumn('number','CANTIDAD');
         var arr = [];
           productos.forEach(element => {
               
@@ -183,10 +182,16 @@
   
         var options = {
           title: "Top 5 de productos más vendidos en el trimestre "+trim+ " del año "+anio+"",
-          width: 800,
+          width: 1200,
           height: 600,
           bar: {groupWidth: "95%"},
         };
+
+        /*DESAPARICION DEL LOADER*/
+        var carga = document.getElementById('contenedor');
+        carga.style.visibility='hidden';
+
+
         var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
         chart.draw(data, options);
     }
@@ -196,6 +201,5 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
       
-    </div>
   </body>
 </html>

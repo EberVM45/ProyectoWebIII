@@ -5,20 +5,20 @@
     ;
 }
 #contenedor{
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     padding-top: 20%;
-    position: relative;
     padding-left: 40%;
+    position: absolute;
     background-color: white;
+    z-index: 2;
+    visibility: hidden;
 }
 
-.visible {
-    display: block!important;
-}
-
-.invisible {
-    display: none!important;
+.reporte{
+    z-index: 1;
+    align-items: center;
 }
 
 .ima_fondo{
