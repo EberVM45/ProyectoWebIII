@@ -24,13 +24,6 @@
 
   <body>
 
-    <div id="contenedor">
-      <div class="ima_fondo"></div>
-      <img src="AnimacionLogo/imgs/Elices.png" width="200px" height="209px"  class="img_elices" alt="">
-      <img src="AnimacionLogo/imgs/Letras.png" width="200px" height="215px"  class="img_letras" alt="">
-    
-    </div>
-
     <!--NAVBAR-->
     <header class="site-header sticky-top py-1">
       <nav class="navbar navbar-expand-lg">
@@ -44,8 +37,6 @@
                   <img src="../img/menui.png" alt="" width="40em" height="50em">
               </button>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                  
-
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-flex d-sm-inline d-md-inline">
                       <li class="nav-item">
                           <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
@@ -104,7 +95,11 @@
     <div class="row">
       <div class="col-12 col-lg-6 mb-3">
         <label for="ano" class="form-label">Año</label>
-        <input type="number" class="form-control" id="ano">
+        <select class="form-select" id="ano" name="ano">
+          <option value="1996" selected>1996</option>
+          <option value="1997">1997</option>
+          <option value="1998">1998</option>
+      </select>
       </div>
       <div class="col-12 col-lg-6 mb-3">
         <label for="trimestre" class="form-label">Trimestre</label>
@@ -116,19 +111,28 @@
       </select>
       </div>
     </div>
-    <button id="btnEnv" class="btn btn_registrar" onclick="cargarDatos()">Generar reporte</button>
+    <button id="btnEnv" class="btn btn-success" onclick="cargarDatos()">Generar reporte</button>
   </div>
 
+  <div id="contenedor" class="visible invisible">
+    <div class="ima_fondo"></div>
+    <img src="AnimacionLogo/imgs/Elices.png" width="200px" height="209px"  class="img_elices" alt="">
+    <img src="AnimacionLogo/imgs/Letras.png" width="200px" height="215px"  class="img_letras" alt="">
+  
+</div>
     <!--Div that will hold the dashboard-->
-
-    <div class="reporte">
-      <div id="dashboard_div"></div>
-        <!--Divs that will hold each control and chart-->
-        <div id="columnchart_values"></div>
-    </div>
-    
+    <div id="dashboard_div">
+      <!--Divs that will hold each control and chart-->
+      <div id="columnchart_values"></div>
       <script type="text/javascript">
 
+      $(document).ajaxStart(function() {
+        $("#contenedor").addClass('visible');
+      });
+
+      $(document).ajaxStop(function() {
+        $("#contenedor").removeClass('visible');
+      });
 
         // Load the Visualization API and the controls package.
         google.charts.load('current', {'packages':['corechart']});
@@ -143,9 +147,8 @@
           var anio = document.getElementById("ano").value;
           var trim = document.getElementById("trimestre").value;
 
-          /*APARICION DEL LOADER*/
-          var carga = document.getElementById('contenedor');
-          carga.style.visibility='visible';
+
+          const carga = document.getElementById("contenedor");
           
             fetch('https://localhost:44379/api/Employees/productos_trim?ano='+anio+'&trimestre='+trim+'')
                 .then(response => response.json())
@@ -159,7 +162,7 @@
         function drawChart(productos) {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'producto');
-        data.addColumn('number','CANTIDAD');
+        data.addColumn('number','cantidad');
         var arr = [];
           productos.forEach(element => {
               
@@ -178,16 +181,10 @@
   
         var options = {
           title: "Top 5 de productos más vendidos en el trimestre "+trim+ " del año "+anio+"",
-          width: 1200,
+          width: 800,
           height: 600,
           bar: {groupWidth: "95%"},
         };
-
-        /*DESAPARICION DEL LOADER*/
-        var carga = document.getElementById('contenedor');
-        carga.style.visibility='hidden';
-
-
         var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
         chart.draw(data, options);
     }
@@ -197,5 +194,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
       
+    </div>
   </body>
 </html>
